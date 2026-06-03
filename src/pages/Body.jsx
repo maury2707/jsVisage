@@ -1,49 +1,15 @@
-
-
-import { useEffect, useState } from 'react'
 import CarCard from '../components/CarCard.jsx'
+import CarsAPI from '../components/APIs/CarsAPI.jsx'
 
 function Body() {
-  const [cars, setCars] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    async function fetchCars() {
-      try {
-        const response = await fetch('https://myfakeapi.com/api/cars')
-        if (!response.ok) {
-          throw new Error('Failed to fetch cars')
-        }
-        const data = await response.json()
-        setCars(data.cars)
-      } catch (err) {
-        setError(err.message)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchCars()
-  }, [])
-
+  const { cars, loading, error } = CarsAPI()
   return (
-    <main style={{ backgroundColor: '#f5f0e8', minHeight: '100vh', padding: '40px' }}>
-      <div
-        style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gap: '24px',
-        }}
-      >
-
-      {loading && <p style={{ color: '#333', fontSize: '18px' }}>Loading cars...</p>}  
-      {cars.map(car => (
-        CarCard({ car })
-      ))}
-
+    <main className="min-h-screen bg-[#f5f0e8] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10">
+      <div className="w-full max-w-[1200px] mx-auto grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {loading && <p className="text-[#333] text-base">Loading cars...</p>}
+        {cars.map(car => (
+          <CarCard key={car.id} car={car} />
+        ))}
       </div>
     </main>
   )

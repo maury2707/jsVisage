@@ -17,24 +17,10 @@ function Footer() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const footerStyle = {
-    position: 'fixed',
-    left: 0,
-    bottom: 0,
-    width: '100%',
-    backgroundColor: '#0b2140',
-    color: '#ff3b3b',
-    textAlign: 'center',
-    padding: '12px 0',
-    fontFamily: 'sans-serif',
-    fontSize: '14px',
-    zIndex: 999,
-    transform: visible ? 'translateY(0)' : 'translateY(100%)',
-    transition: 'transform 200ms ease',
-  }
+  const footerClasses = `fixed left-0 bottom-0 w-full bg-[#0b2140] text-[#ff3b3b] text-center py-3 font-sans text-sm z-50 transform transition-transform duration-200 ease-in-out ${visible ? 'translate-y-0' : 'translate-y-full'}`
 
   return (
-    <footer style={footerStyle}>
+    <footer className={footerClasses}>
       © {new Date().getFullYear()} jsVisage. All rights reserved.
     </footer>
   )
