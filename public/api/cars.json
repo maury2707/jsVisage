@@ -1,0 +1,10 @@
+{
+  "cars": [
+    { "id": 1, "car": "Toyota", "car_model": "Corolla", "car_color": "Red", "car_model_year": 2020, "price": "$20,500" },
+    { "id": 2, "car": "Honda", "car_model": "Civic", "car_color": "Blue", "car_model_year": 2021, "price": "$23,000" },
+    { "id": 3, "car": "Ford", "car_model": "Mustang", "car_color": "Black", "car_model_year": 2019, "price": "$35,900" },
+    { "id": 4, "car": "Tesla", "car_model": "Model 3", "car_color": "White", "car_model_year": 2022, "price": "$41,200" },
+    { "id": 5, "car": "Mazda", "car_model": "CX-5", "car_color": "Gray", "car_model_year": 2023, "price": "$28,750" },
+    { "id": 6, "car": "Volkswagen", "car_model": "Golf", "car_color": "Silver", "car_model_year": 2020, "price": "$24,300" }
+  ]
+}

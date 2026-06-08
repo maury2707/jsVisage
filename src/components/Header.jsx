@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+// Enlaces de navegacion: una sola fuente de verdad para los botones del header.
+const navLinks = [
+  { label: 'Cars', path: '/' },
+  { label: 'Airplanes', path: '/airplanes' },
+  { label: 'Motorcycles', path: '/motorcycles' },
+]
+
 function Header() {
   const navigate = useNavigate()
   const [visible, setVisible] = useState(true)
@@ -34,18 +41,15 @@ function Header() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
-          <button
-            onClick={() => navigate('/')}
-            className="px-4 py-2 bg-white/10 text-orange-100 rounded-md border border-white/20 hover:bg-white/20 transition"
-          >
-            Page 1
-          </button>
-          <button
-            onClick={() => navigate('/body2')}
-            className="px-4 py-2 bg-white/10 text-orange-100 rounded-md border border-white/20 hover:bg-white/20 transition"
-          >
-            Page 2
-          </button>
+          {navLinks.map(({ label, path }) => (
+            <button
+              key={path}
+              onClick={() => navigate(path)}
+              className="px-4 py-2 bg-white/10 text-orange-100 rounded-md border border-white/20 hover:bg-white/20 transition"
+            >
+              {label}
+            </button>
+          ))}
         </div>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">

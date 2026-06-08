@@ -1,0 +1,9 @@
+{
+  "motorcycles": [
+    { "id": 1, "motorcycle": "Harley-Davidson", "motorcycle_model": "Iron 883", "type": "Cruiser", "engine_cc": 883, "power_hp": 50, "price": "$11,300" },
+    { "id": 2, "motorcycle": "Yamaha", "motorcycle_model": "MT-07", "type": "Naked", "engine_cc": 689, "power_hp": 73, "price": "$8,200" },
+    { "id": 3, "motorcycle": "Kawasaki", "motorcycle_model": "Ninja 400", "type": "Sport", "engine_cc": 399, "power_hp": 45, "price": "$5,300" },
+    { "id": 4, "motorcycle": "Ducati", "motorcycle_model": "Monster", "type": "Naked", "engine_cc": 937, "power_hp": 111, "price": "$12,995" },
+    { "id": 5, "motorcycle": "BMW", "motorcycle_model": "R 1250 GS", "type": "Adventure", "engine_cc": 1254, "power_hp": 136, "price": "$17,995" }
+  ]
+}

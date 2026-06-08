@@ -1,0 +1,9 @@
+{
+  "airplanes": [
+    { "id": 1, "airplane": "Boeing", "airplane_model": "747-8", "type": "Wide-body", "capacity": 467, "range_km": 14310, "engines": 4, "price": "$418,400,000" },
+    { "id": 2, "airplane": "Airbus", "airplane_model": "A380", "type": "Wide-body", "capacity": 555, "range_km": 15200, "engines": 4, "price": "$445,600,000" },
+    { "id": 3, "airplane": "Cessna", "airplane_model": "172 Skyhawk", "type": "Light aircraft", "capacity": 4, "range_km": 1289, "engines": 1, "price": "$432,000" },
+    { "id": 4, "airplane": "Embraer", "airplane_model": "E190", "type": "Narrow-body", "capacity": 114, "range_km": 4537, "engines": 2, "price": "$50,600,000" },
+    { "id": 5, "airplane": "Bombardier", "airplane_model": "Global 7500", "type": "Business jet", "capacity": 19, "range_km": 14260, "engines": 2, "price": "$75,000,000" }
+  ]
+}

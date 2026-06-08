@@ -6,8 +6,9 @@ import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 
 import { Routes, Route } from 'react-router-dom'
-import Body from './pages/Body.jsx'
-import Body2 from './pages/Body2.jsx'
+import Cars from './pages/Cars.jsx'
+import Airplanes from './pages/Airplanes.jsx'
+import Motorcycles from './pages/Motorcycles.jsx'
 
 function App() {
 
@@ -21,8 +22,9 @@ function App() {
       <Header />
       
       <Routes>
-        <Route path="/" element={<Body />} />
-        <Route path="/body2" element={<Body2 />} />
+        <Route path="/" element={<Cars />} />
+        <Route path="/airplanes" element={<Airplanes />} />
+        <Route path="/motorcycles" element={<Motorcycles />} />
       </Routes>
 
       <Footer />
